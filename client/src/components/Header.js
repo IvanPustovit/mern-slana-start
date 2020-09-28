@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
 import M from "materialize-css";
-import { Link, NavLink, useHistory } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { STOREGE_CART } from "../constant/constant";
 import { useHttp } from "../hooks/http.hook";
-import shortid from "shortid";
 
 const Header = () => {
   document.addEventListener("DOMContentLoaded", function () {
@@ -14,7 +13,6 @@ const Header = () => {
   const { getMethod } = useHttp();
 
   const auth = useContext(AuthContext);
-  const history = useHistory();
 
   const [listItem, setlistItem] = useState();
 
