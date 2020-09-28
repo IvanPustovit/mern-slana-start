@@ -1,0 +1,212 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+.btn-auth-m {
+  margin-right: 10px;
+}
+
+.widht-auth {
+  width: 100%;
+  font-size: 2.5rem;
+}
+
+nav .logo-pad {
+  padding-left: 20px;
+  left: 40%;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+nav i.medium {
+  position: relative;
+  font-size: 3rem;
+}
+
+.count {
+  position: relative;
+  display: flex;
+  color: black;
+  margin-right: 10px;
+  /* z-index: 100; */
+}
+
+.cou {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  color: #ffffff;
+}
+
+.card-list {
+  margin-top: 20px;
+}
+
+.info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.hello {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  left: 3%;
+  align-items: center;
+}
+
+.name-user {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.fix {
+  /* height: 27rem; */
+  text-align: center;
+}
+
+.card .card-image img {
+  height: 35vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.content-fix {
+  display: grid;
+  align-content: space-between;
+  height: 28%;
+  padding-bottom: 5px;
+}
+
+.card-info_name {
+  padding-top: 5px;
+  font-weight: 700;
+  margin: 0;
+  height: 4.5vh;
+}
+
+.card-price {
+  font-weight: 900;
+  color: blue;
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.card-info {
+  height: 2.5vh;
+}
+
+select {
+  display: block;
+}
+
+.label-item {
+  top: -30px !important;
+}
+
+.img-modal:hover {
+  cursor: zoom-in;
+  transition: 1s;
+  transform: scale(1.5);
+}
+
+.card-name {
+  margin: 0;
+  text-align: center;
+  padding: 0 10px !important;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.card .card-action {
+  display: flex;
+}
+
+.item-price {
+  padding-left: 20px;
+  font-size: 25px;
+  margin: 0;
+  color: blue;
+  font-weight: 900;
+}
+
+.link-auth {
+  color: red;
+  font-size: 10px;
+  text-align: center;
+}
+
+.select-item {
+  border: 1px solid green;
+}
+
+.count-order {
+  margin: 0 auto;
+  /* padding: 0; */
+  font-size: 20px;
+  text-align: center;
+  line-height: 2;
+
+  width: 40px;
+  height: 40px;
+}
+
+.header {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  display: grid;
+  text-align: center;
+}
+
+.card-action {
+  align-self: center;
+}
+
+.card-action-option p {
+  margin: auto 10px;
+}
+
+.card-image-cart:hover {
+  cursor: zoom-in;
+  transition: 1s;
+  transform: scale(1.5);
+}
+
+.list-cart {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.price-cart-item {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.order-input {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.total-sum {
+  padding-left: 10px;
+}
+
+.baner {
+  position: fixed;
+  top: -1px;
+  color: red;
+  left: 30%;
+  background-repeat: space;
+  background: chartreuse;
+  margin: 0;
+  padding: 0px;
+  font-size: 15px;
+  line-height: 15px;
+  z-index: 1000;
+}

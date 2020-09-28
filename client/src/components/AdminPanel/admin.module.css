@@ -1,0 +1,24 @@
+.admin {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.admin-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: max-content;
+}
+
+.card {
+  display: block !important;
+  /* margin: 5px; */
+}
+
+.aside {
+  padding-top: 25px;
+}
+
+.aside-link {
+  display: block;
+  margin-top: 15px;
+}
