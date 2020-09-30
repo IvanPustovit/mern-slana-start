@@ -54,7 +54,7 @@ const CartForm = () => {
         setForm("");
         totalOrder();
         M.toast({ html: "Дякуємо за замовлення.", classes: "rounded" });
-        history.push("/shop");
+        history.push("/");
       }
     } catch (error) {
       console.log(error);

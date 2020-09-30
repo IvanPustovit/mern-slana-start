@@ -24,7 +24,7 @@ const RegisterPage = () => {
     try {
       const data = await request("/auth/register", "POST", { ...form });
       if (data) {
-        history.push("/");
+        history.push("/auth/login");
       }
     } catch (error) {}
   };
@@ -71,7 +71,7 @@ const RegisterPage = () => {
             </div>
           </div>
           <div className="card-action">
-            <Link to="/" name="action">
+            <Link to="/auth/login" name="action">
               Увійти
             </Link>
             <button

@@ -33,7 +33,6 @@ const CartItem = ({
 
       case "remove":
         if (listCart[index].amountInCart === 1) {
-          console.log(listCart);
           listCart.splice(index, 1);
           setStor(STOREGE_CART, listCart);
         } else {

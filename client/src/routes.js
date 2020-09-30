@@ -16,6 +16,7 @@ const routesIsAuth = (isAuth) => {
         <Route path="/" exact>
           <Header />
           <Home />
+          <Footer />
         </Route>
         <Route path="/cart" exact>
           <Header />
@@ -46,6 +47,7 @@ const routesIsAuth = (isAuth) => {
       <Route path="/" exact>
         <Header />
         <Home />
+        <Footer />
       </Route>
       <Route path="/cart" exact>
         <Header />
@@ -56,7 +58,7 @@ const routesIsAuth = (isAuth) => {
         <ItemPage />
         <Footer />
       </Route>
-      <Route path="/" exact>
+      <Route path="/auth/login" exact>
         <AuthPage />
       </Route>
       <Route path="/auth/register" exact>

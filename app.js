@@ -22,23 +22,28 @@ app.use(
   // }
 );
 
-app.get("/", (req, res) => {
-  res.send("Hello from Express!");
-});
+// process.env.NODE_ENV = "production";
+
+if (process.env.NODE_ENV === "production") {
+  app.use("/", express.static(path.join(__dirname, "client", "build")));
+  console.log("Hello");
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
 app.use("/auth", routerAuth);
 app.use("/", routerItem);
 app.use("/item", routerItem);
 app.use("/cart", routerItem);
 app.use("/shop", routerItem);
 app.use("/admin", routerItem);
+// app.get("/", (req, res) => {
+//   res.send("Hello from Express!");
+// });
 
-if (process.env.NODE_ENV === "production") {
-  app.use("/", express.static(path.join(__dirname, "client", "build")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
+console.log(process.env.NODE_ENV);
 const PORT = process.env.PORT || 3011;
 
 async function connect() {

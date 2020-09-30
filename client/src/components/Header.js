@@ -42,12 +42,12 @@ const Header = () => {
               {user.isAuth && (
                 <p className="hello">
                   Вітамо{" "}
-                  <Link to="/shop" className="name-user">
+                  <Link to="/" className="name-user">
                     {user.userName}
                   </Link>
                 </p>
               )}
-              <Link to="/shop" className="brand-logo logo-pad ">
+              <Link to="/" className="brand-logo logo-pad ">
                 <img
                   alt=""
                   className="responsive-img"
@@ -70,7 +70,7 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={`/shop/`} name="Рушники" onClick={filterItem}>
+                  <NavLink to={`/`} name="Рушники" onClick={filterItem}>
                     Рушники
                   </NavLink>
                 </li>
@@ -82,14 +82,14 @@ const Header = () => {
                 </li>
                 {user.isAuth && (
                   <li>
-                    <Link to="/shop" onClick={logoutHandler}>
+                    <Link to="/" onClick={logoutHandler}>
                       Вийти
                     </Link>
                   </li>
                 )}
                 {!user.isAuth && (
                   <li>
-                    <Link to="/">Увійти</Link>
+                    <Link to="/auth/login">Увійти</Link>
                   </li>
                 )}
               </ul>
