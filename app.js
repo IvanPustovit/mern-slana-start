@@ -14,14 +14,19 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan());
 app.use(
-  cors()
-  //   {
-  //   credentials: true,
-  //   origin: ["http://localhost:3000"],
-  //   optionsSuccessStatus: 200,
-  // }
+  cors({
+    credentials: true,
+    origin: ["http://slana.net.ua"],
+    optionsSuccessStatus: 200,
+  })
 );
-
+app.use(function (req, res, next) {
+  res.header(
+    "Content-Security-Policy",
+    "default-src 'self';script-src 'self';object-src 'none';img-src 'self';media-src 'self';frame-src 'none';font-src 'self' data:;connect-src 'self';style-src 'self'"
+  );
+  next();
+});
 // process.env.NODE_ENV = "production";
 
 if (process.env.NODE_ENV === "production") {
@@ -43,7 +48,8 @@ app.use("/admin", routerItem);
 //   res.send("Hello from Express!");
 // });
 
-console.log(process.env.NODE_ENV);
+console.log(process.env.INLINE_RUNTIME_CHUNK);
+console.log(__dirname);
 const PORT = process.env.PORT || 3011;
 
 async function connect() {

@@ -22,10 +22,7 @@ const Header = () => {
   };
 
   const filterItem = async (e) => {
-    console.log(e.target.name);
-
-    const data = await getMethod(`/shop/${e.target.name}`, "GET");
-    console.log(data);
+    const data = await getMethod(`/${e.target.name}`, "GET");
     setlistItem(data);
     // history.push(`/shop/t-shirts`);
   };
