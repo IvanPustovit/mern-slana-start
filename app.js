@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.use("/auth", routerAuth);
+app.use("/api/auth", routerAuth);
 app.use("/", routerItem);
 app.use("/item", routerItem);
 app.use("/cart", routerItem);

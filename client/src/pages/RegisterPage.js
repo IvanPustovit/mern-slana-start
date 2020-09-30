@@ -22,7 +22,7 @@ const RegisterPage = () => {
 
   const registerHandler = async () => {
     try {
-      const data = await request("/auth/register", "POST", { ...form });
+      const data = await request("/api/auth/register", "POST", { ...form });
       if (data) {
         history.push("/auth/login");
       }
