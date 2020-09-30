@@ -11,7 +11,7 @@ const Home = () => {
   const { getMethod } = useHttp();
 
   useEffect(() => {
-    const data = getMethod("/get", "GET");
+    const data = getMethod("/api/get", "GET");
     data.then((res) => setlistItem(res));
   }, [getMethod]);
 

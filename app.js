@@ -39,10 +39,10 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use("/api/auth", routerAuth);
-app.use("/", routerItem);
+app.use("/api/", routerItem);
 app.use("/item", routerItem);
 app.use("/cart", routerItem);
-app.use("/shop", routerItem);
+// app.use("/api/", routerItem);
 app.use("/admin", routerItem);
 // app.get("/", (req, res) => {
 //   res.send("Hello from Express!");

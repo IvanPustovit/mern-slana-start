@@ -7,7 +7,7 @@ const Cart = () => {
   const { listCart } = useContext(AuthContext);
 
   return (
-    <div>
+    <div className="main-container">
       {!listCart && <p>Ваша корзина пуста</p>}
       {listCart && (
         <ul className="list-cart">

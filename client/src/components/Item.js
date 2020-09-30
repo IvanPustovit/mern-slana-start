@@ -47,11 +47,11 @@ const Item = () => {
     setStor(STOREGE_CART, storage.sort(byField("name")));
     auth.totalOrder();
     message("Товар добавлено в корзину!");
-    history.push("/shop");
+    history.push("/");
   };
 
   useEffect(() => {
-    const data = request(`/get/${idItem}`, "GET");
+    const data = request(`/api/${idItem}`, "GET");
     data.then((res) => setItem(res));
   }, [idItem, request]);
 
@@ -66,7 +66,7 @@ const Item = () => {
     <>
       {isEmpty(item) && <Loader />}
       {!isEmpty(item) > 0 && (
-        <div className="row">
+        <div className="row main-container">
           <div className="col s12 m12 l12">
             <div className="card horizontal">
               <div className="card-image">

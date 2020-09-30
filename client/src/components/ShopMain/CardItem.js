@@ -10,7 +10,7 @@ const CardItem = (item) => {
           <img src={item.img} alt={item.alt} />
 
           <Link
-            to={`/shop/${item._id}`}
+            to={`/${item._id}`}
             className="btn-floating halfway-fab waves-effect waves-light red"
           >
             <i className="material-icons">add</i>

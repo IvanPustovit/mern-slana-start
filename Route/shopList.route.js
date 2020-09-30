@@ -15,7 +15,7 @@ router.get("/get", getItem);
 router.post("/add", addItem);
 router.delete("/delete", deleteItem);
 // router.post("/", addItem);
-router.get("/get/:id", getItemId);
+router.get("/:id", getItemId);
 router.post("/post/order", addOrder);
 // router.get("/:name", getItemFilter);
 

@@ -16,6 +16,9 @@ nav .logo-pad {
 
 .navigation {
   margin-top: 20px;
+  position: fixed;
+  width: inherit;
+  z-index: 100;
 }
 
 nav i.medium {
@@ -62,6 +65,9 @@ nav i.medium {
   padding-right: 5px;
 }
 
+.main-container {
+  padding-top: 100px;
+}
 .fix {
   /* height: 27rem; */
   text-align: center;

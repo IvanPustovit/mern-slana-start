@@ -49,7 +49,7 @@ const Header = () => {
                   alt=""
                   className="responsive-img"
                   width="100vh"
-                  src="https://i.ibb.co/YQNpyLL/logo.png"
+                  src="/logo.png"
                 />
               </Link>
 
