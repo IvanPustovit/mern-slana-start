@@ -23,7 +23,7 @@ app.use(
 app.use(function (req, res, next) {
   res.header(
     "Content-Security-Policy",
-    "default-src 'unsafe-inline';script-src 'unsafe-inline';object-src 'unsafe-inline';img-src 'unsafe-inline';media-src 'unsafe-inline';frame-src 'unsafe-inline';font-src 'unsafe-inline';connect-src 'unsafe-inline';style-src 'unsafe-inline';style-src-elem '*'"
+    "default-src 'unsafe-inline';script-src 'unsafe-inline';object-src 'unsafe-inline';img-src 'unsafe-inline';media-src 'unsafe-inline';frame-src 'unsafe-inline';font-src 'unsafe-inline';connect-src 'unsafe-inline';style-src 'unsafe-inline'"
   );
   next();
 });
