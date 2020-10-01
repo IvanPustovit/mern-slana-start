@@ -22,11 +22,6 @@ const routesIsAuth = (isAuth) => {
           <CartPage />
           <Footer />
         </Route>
-        <Route path="/:id">
-          <Header />
-          <ItemPage />
-          <Footer />
-        </Route>
         <Route path="/admin" exact>
           <Header />
           <Admin />
@@ -35,6 +30,11 @@ const routesIsAuth = (isAuth) => {
         <Route path="/admin/goods" exact>
           <Header />
           <Admin />
+          <Footer />
+        </Route>
+        <Route path="/shop/:id">
+          <Header />
+          <ItemPage />
           <Footer />
         </Route>
         <Redirect to="/" />
@@ -51,19 +51,20 @@ const routesIsAuth = (isAuth) => {
         <Header />
         <CartPage />
       </Route>
-      <Route path="/:id">
+      <Route path="/auth/login" exact>
+        <Header />
+        <AuthPage />
+      </Route>
+      <Route path="/auth/register" exact>
+        <Header />
+        <RegisterPage />
+      </Route>
+      <Route path="/shop/:id">
         <Header />
         <ItemPage />
         <Footer />
       </Route>
-      <Route path="/auth/login" exact>
-        <AuthPage />
-      </Route>
-      <Route path="/auth/register" exact>
-        <RegisterPage />
-      </Route>
-
-      {/* <Redirect to="/shop" /> */}
+      <Redirect to="/" />
     </Switch>
   );
 };

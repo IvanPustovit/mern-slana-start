@@ -8,7 +8,7 @@ const OrderShema = new Schema({
   count: { type: Number, required: true },
   sum: { type: Number, required: true },
   goods: { type: Array, required: true },
-  owner: { type: Types.ObjectId, ref: "Order", required: true },
+  owner: { type: Types.ObjectId, ref: "User", required: true },
 });
 
 module.exports = model("Order", OrderShema);

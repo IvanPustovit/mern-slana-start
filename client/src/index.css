@@ -4,6 +4,12 @@
   margin-right: 10px;
 }
 
+.loader {
+  z-index: 100;
+  top: 20vh;
+  left: 50%;
+}
+
 .widht-auth {
   width: 100%;
   font-size: 2.5rem;

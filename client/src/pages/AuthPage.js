@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
@@ -7,6 +7,7 @@ import { useMessage } from "../hooks/message.hook";
 import "../index.css";
 
 const AuthPage = () => {
+  const history = useHistory();
   const auth = useContext(AuthContext);
 
   const message = useMessage();
@@ -26,7 +27,9 @@ const AuthPage = () => {
   const loginHandler = async () => {
     try {
       const data = await request("/api/auth/login", "POST", { ...form });
+      console.log(data);
       auth.login(data.token, data.userId, data.name);
+      history.push("/");
     } catch (error) {}
   };
 

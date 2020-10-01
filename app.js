@@ -23,7 +23,7 @@ app.use(
 app.use(function (req, res, next) {
   res.header(
     "Content-Security-Policy",
-    "default-src 'self' https://fonts.googleapis.com http://slana.net.ua https://fonts.gstatic.com https://firebasestorage.googleapis.com 'unsafe-inline'" //;style-src self' https://fonts.googleapis.com;  font-src 'self' data: https://fonts.gstatic.com" //;object-src 'unsafe-inline';img-src 'self';media-src 'unsafe-inline';frame-src 'unsafe-inline';font-src 'unsafe-inline';connect-src 'unsafe-inline';style-src 'unsafe-inline'; style-src-elem 'self' '*.googleapis.com'"
+    "default-src 'self' https://fonts.googleapis.com http://slana.net.ua https://fonts.gstatic.com https://firebasestorage.googleapis.com https://mern-slana-start.vercel.app  http://localhost:3000 'unsafe-inline'" //;style-src self' https://fonts.googleapis.com;  font-src 'self' data: https://fonts.gstatic.com" //;object-src 'unsafe-inline';img-src 'self';media-src 'unsafe-inline';frame-src 'unsafe-inline';font-src 'unsafe-inline';connect-src 'unsafe-inline';style-src 'unsafe-inline'; style-src-elem 'self' '*.googleapis.com'"
   );
   next();
 });
@@ -47,8 +47,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-console.log(process.env.INLINE_RUNTIME_CHUNK);
-console.log(__dirname);
+console.log(process.env.NODE_ENV);
 const PORT = process.env.PORT || 3011;
 
 async function connect() {
