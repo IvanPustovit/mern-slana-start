@@ -23,7 +23,7 @@ app.use(
 app.use(function (req, res, next) {
   res.header(
     "Content-Security-Policy",
-    "default-src 'self';script-src 'sha256-eE1k/Cs1U0Li9/ihPPQ7jKIGDvR8fYw65VJw+txfifw=';object-src 'none';img-src 'self';media-src 'self';frame-src 'none';font-src 'self' data:;connect-src 'self';style-src 'none'"
+    "default-src 'none';script-src 'sha256-eE1k/Cs1U0Li9/ihPPQ7jKIGDvR8fYw65VJw+txfifw=';object-src 'none';img-src 'self';media-src 'self';frame-src 'none';font-src 'self' data:;connect-src 'self';style-src 'none';style-src-elem 'none'"
   );
   next();
 });
