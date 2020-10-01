@@ -20,13 +20,13 @@ app.use(
     optionsSuccessStatus: 200,
   })
 );
-app.use(function (req, res, next) {
-  res.header(
-    "Content-Security-Policy",
-    "default-src '*';script-src '*';object-src '*';img-src '*';media-src '*';frame-src '*';font-src '*';connect-src '*';style-src '*';style-src-elem '*'"
-  );
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.header(
+//     "Content-Security-Policy",
+//     "default-src '*';script-src '*';object-src '*';img-src '*';media-src '*';frame-src '*';font-src '*';connect-src '*';style-src '*';style-src-elem '*'"
+//   );
+//   next();
+// });
 // process.env.NODE_ENV = "production";
 
 if (process.env.NODE_ENV === "production") {
