@@ -1,4 +1,4 @@
-@import "~materialize-css/dist/css/materialize.min.css";
+@import "/materialize.min.css";
 
 .btn-auth-m {
   margin-right: 10px;
