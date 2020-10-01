@@ -23,7 +23,7 @@ app.use(
 app.use(function (req, res, next) {
   res.header(
     "Content-Security-Policy",
-    "default-src 'self'; style-src-elem 'https://fonts.googleapis.com'" //;script-src 'unsafe-inline';object-src 'unsafe-inline';img-src 'self';media-src 'unsafe-inline';frame-src 'unsafe-inline';font-src 'unsafe-inline';connect-src 'unsafe-inline';style-src 'unsafe-inline'; style-src-elem 'self' '*.googleapis.com'"
+    "default-src 'self' https://fonts.googleapis.com" //;script-src 'unsafe-inline';object-src 'unsafe-inline';img-src 'self';media-src 'unsafe-inline';frame-src 'unsafe-inline';font-src 'unsafe-inline';connect-src 'unsafe-inline';style-src 'unsafe-inline'; style-src-elem 'self' '*.googleapis.com'"
   );
   next();
 });
