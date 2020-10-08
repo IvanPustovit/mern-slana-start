@@ -39,7 +39,7 @@ const Header = () => {
               {user.isAuth && (
                 <p className="hello">
                   Вітамо{" "}
-                  <Link to="/" className="name-user">
+                  <Link to="/profile" className="name-user">
                     {user.userName}
                   </Link>
                 </p>
@@ -56,6 +56,10 @@ const Header = () => {
               <a href="#" data-target="mobile-demo" className="sidenav-trigger">
                 <i className="material-icons">menu</i>
               </a>
+              <Link to="/cart" className="count mobile-cart">
+                <i className=" material-icons medium">add_shopping_cart</i>
+                <span className="cou mobile-count">{auth.countCart}</span>
+              </Link>
               <ul className="right hide-on-med-and-down">
                 <li>
                   <NavLink

@@ -138,7 +138,7 @@ const Item = () => {
 
                 <div className="card-action">
                   {!auth.isAuth && (
-                    <Link to="/">
+                    <Link to="/auth/login">
                       <p className="link-auth">
                         Щоб продовжити покупку зареєтруйтеся або увійдіть під
                         своїм логіном

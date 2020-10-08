@@ -1,6 +1,7 @@
 .admin {
   display: grid;
   grid-template-columns: 200px auto;
+  padding-top: 110px;
 }
 
 .admin-list {
@@ -21,4 +22,13 @@
 .aside-link {
   display: block;
   margin-top: 15px;
+}
+
+.name {
+  height: 2rem;
+}
+
+.species {
+  height: 2rem;
+  margin: 0;
 }

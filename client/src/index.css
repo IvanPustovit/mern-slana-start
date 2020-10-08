@@ -1,5 +1,9 @@
 @import "/materialize.min.css";
 
+.container {
+  position: relative;
+}
+
 .btn-auth-m {
   margin-right: 10px;
 }
@@ -21,7 +25,7 @@ nav .logo-pad {
 }
 
 .navigation {
-  margin-top: 20px;
+  margin-top: 40px;
   position: fixed;
   width: inherit;
   z-index: 100;
@@ -210,10 +214,12 @@ select {
 }
 
 .baner {
+  text-align: center;
   position: fixed;
   top: -1px;
   color: red;
-  left: 30%;
+  left: 0;
+  right: 0;
   background-repeat: space;
   background: chartreuse;
   margin: 0;
@@ -221,4 +227,23 @@ select {
   font-size: 15px;
   line-height: 15px;
   z-index: 1000;
+}
+
+.sidenav {
+  height: max-content;
+}
+
+.mobile-cart {
+  left: 50%;
+  display: none;
+}
+
+.mobile-count {
+  left: 40px;
+}
+
+@media only screen and (max-width: 980px) {
+  .mobile-cart {
+    display: flex;
+  }
 }

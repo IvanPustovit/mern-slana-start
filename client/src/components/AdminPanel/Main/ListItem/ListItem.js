@@ -9,7 +9,7 @@ const ListItem = () => {
   const { getMethod } = useHttp();
 
   useEffect(() => {
-    const data = getMethod("/get", "GET");
+    const data = getMethod("/api/get", "GET");
     data.then((res) => setListGoods(res));
   }, [getMethod]);
 

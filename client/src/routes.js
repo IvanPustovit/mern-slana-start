@@ -37,7 +37,7 @@ const routesIsAuth = (isAuth) => {
           <ItemPage />
           <Footer />
         </Route>
-        <Redirect to="/" />
+        {/* <Redirect to="/" /> */}
       </Switch>
     );
   }
@@ -64,7 +64,7 @@ const routesIsAuth = (isAuth) => {
         <ItemPage />
         <Footer />
       </Route>
-      <Redirect to="/" />
+      {/* <Redirect to="/" /> */}
     </Switch>
   );
 };

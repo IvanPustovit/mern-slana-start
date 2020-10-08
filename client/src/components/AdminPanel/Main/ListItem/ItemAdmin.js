@@ -8,10 +8,11 @@ import styles from "../../admin.module.css";
 const ItemAdmin = (good) => {
   const { getMethod, request } = useHttp();
   const { formUpdate } = useContext(AuthContext);
+
   const updateGood = async () => {
     try {
       const id = good._id;
-      const data = await getMethod(`/get/${id}`);
+      const data = await getMethod(`/item/${id}`);
       formUpdate(data);
     } catch (error) {
       console.log(error);
@@ -28,9 +29,9 @@ const ItemAdmin = (good) => {
       console.log(error);
     }
   };
-  useEffect(() => {
-    getMethod("/get");
-  }, [getMethod]);
+  // useEffect(() => {
+  //   getMethod("/get");
+  // }, [getMethod]);
   return (
     <li className="row">
       <div className="col s12 l12">
@@ -38,10 +39,11 @@ const ItemAdmin = (good) => {
           <div className="card-image">
             <img src={good.img} alt={good.name} />
           </div>
-          <div className="card-content">
-            <span className="card-title">{good.name}</span>
-
-            <p>
+          <div className={styles.content}>
+            <div className={styles.name}>
+              <span className={styles.title}>{good.name.toUpperCase()}</span>
+            </div>
+            <p className={styles.species}>
               {good.species} {good.category.toLowerCase()}
             </p>
             <p>

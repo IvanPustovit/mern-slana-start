@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import { useHttp } from "../../../hooks/http.hook";
 import { useMessage } from "../../../hooks/message.hook";
@@ -8,6 +9,7 @@ const Form = () => {
   const message = useMessage();
   const { formItem, formUpdate } = useContext(AuthContext);
   const { request } = useHttp();
+  const history = useHistory();
 
   const initialState = {
     _id: "",
@@ -52,9 +54,10 @@ const Form = () => {
     const data = await request("/admin/add", "POST", newGood);
     if (data) {
       setForm(initialState);
+      history.push("/admin");
     }
     formUpdate(initialState);
-    message("Товар добавлено в базу");
+    message("Товар відредаговано");
   };
   useEffect(() => {
     setForm(formItem);
