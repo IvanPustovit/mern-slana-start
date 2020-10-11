@@ -24,7 +24,7 @@ const options = {
 };
 
 https.createServer(options, app).listen(443);
-http.createServer(app).listen(80);
+// http.createServer(app).listen(80);
 
 app.use(forceSsl);
 app.use(express.static(path.join(__dirname, "images")));
